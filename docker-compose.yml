@@ -1,0 +1,12 @@
+services:
+  cert-manager:
+    build: .
+    restart: unless-stopped
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Imposta ADMIN_PASSWORD nelle variabili ambiente di Coolify}
+      CERTS_DIR: /proxy/certs
+      DYNAMIC_DIR: /proxy/dynamic
+      DYNAMIC_FILE: custom-certificates.yaml
+    volumes:
+      - /data/coolify/proxy/certs:/proxy/certs
+      - /data/coolify/proxy/dynamic:/proxy/dynamic

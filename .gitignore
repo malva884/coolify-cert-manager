@@ -1,0 +1,15 @@
+# IDE
+.idea/
+.vscode/
+
+# PHP dependencies
+vendor/
+
+# Environment / secrets
+.env
+.env.*
+
+# Logs & OS files
+*.log
+Thumbs.db
+.DS_Store
